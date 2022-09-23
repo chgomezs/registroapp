@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label class="letras" position="floating">Nombre Usuario</ion-label>
+    <ion-input Description="text" type="string" #name Placeholder="Juan Gallardo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="letras" position="floating">Contraseña</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+  <ion-text >
+    <h6 class="texto" [routerLink]="['/restablecer']" class="ion-text-center">¿Olvidaste tú contraseña?</h6>
+  </ion-text>
+  <ion-text >
+    <h6 [routerLink]="['/registrar']" class="ion-text-center">¿Aún no te haz registrado?</h6>
+  </ion-text>
+
+  <!-- <div ngIf="mensaje;">
+    <h3 id="Error">Mensaje: {{mensaje}}</h3>
+  </div>
+  <divngIf="mensaje2;">
+    <h3 id="Error">Mensaje: {{mensaje2}}</h3>
+  </div> -->
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button [routerLink]="['/home']" expand="full" (click)="grabar(name, password)" color="success">Ingresar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

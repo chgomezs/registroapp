@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Restablecer Contraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input Description="text" type="email" #email Placeholder="Juan123@duocuc.cl"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Nueva Contraseña</ion-label>
+    <ion-input type="password" #newpassword></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label size="small" position="floating" >Confirmar nueva contraseña</ion-label>
+    <ion-input type="password" #newpassword2></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button [routerLink]="['/home']" expand="full" (click)="grabar(email, newpassword, newpassword2)" color="success">Restablecer
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

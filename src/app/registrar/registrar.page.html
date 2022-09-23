@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Registrar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input Description="text" type="email" #email Placeholder="Juan123@duocuc.cl"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombre Usuario</ion-label>
+    <ion-input Description="text" type="string" #name Placeholder="Juan Gallardo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Contraseña</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Confirmar Contraseña</ion-label>
+    <ion-input type="password" #password2></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button  expand="full" (click)="grabar(email, name, password, password2)"  (click)="presentAlert()" color="success">Registrarse
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
